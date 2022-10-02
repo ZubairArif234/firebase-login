@@ -6,7 +6,8 @@
 
 
 
-
+let loaderP = document.getElementById("loaderP");
+// let loaderC = document.getElementById("loaderC")
 
 
 
@@ -122,6 +123,7 @@ const getUserFromDataBase = async (uid) => {
     const q = query(collection(db, "users"), where("email", "!=", email));
     const querySnapshot = await getDocs(q);
     let users = document.getElementById("users");
+    loaderP.style.display = "none"
     querySnapshot.forEach((doc) => {
         // <tr class="findli" id="qwert"><li  class="findli" id="qwert"><td>${doc.data().name}</td><td><button onclick='startChat("${
         //     doc.id
@@ -159,6 +161,7 @@ const getUserFromDataBase = async (uid) => {
       chatID = `${currentId}${id}`;
     }
     loadAllChats(chatID,currentId);
+    
     send.addEventListener("click", async () => {
       let allMessages = document.getElementById("all-messages");
       allMessages.innerHTML = "";
@@ -186,6 +189,7 @@ const getUserFromDataBase = async (uid) => {
         // orderBy("timestamp", "asc")
       );
       let allMessages = document.getElementById("all-messages");
+      
       unsubscribe = onSnapshot(q, (querySnapshot) => {
         allMessages.innerHTML = "";
         // let date = new Date;

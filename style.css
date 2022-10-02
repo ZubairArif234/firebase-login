@@ -631,7 +631,12 @@ button {
 
 
 
-  
+#loaderR{
+	display: none;
+}  
+#loaderL{
+	display: none;
+}
 
 
 

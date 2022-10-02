@@ -103,6 +103,9 @@ if (registerPassword.value.trim() === "" ){
   )
  }
  else{
+  let loaderR = document.getElementById('loaderR');
+  loaderR.style.display = "block";
+  register.style.display = "none"
   createUserWithEmailAndPassword(auth, registerEmail.value, registerPassword.value)
     
     .then(async(userCredential) => {
@@ -120,6 +123,8 @@ if (registerPassword.value.trim() === "" ){
 
       });
       // ...
+      loaderR.style.display = "none";
+  register.style.display = "block"
       Swal.fire(
         'Success',
         'Successfully Registered ',
@@ -172,16 +177,20 @@ let arrfriend = [];
 // firebase login
 let login = document.getElementById("loginBtn")
 login.addEventListener("click", function(){
-
+  let loaderL = document.getElementById("loaderL");
     let loginEmail = document.getElementById("loginEmail");
     let loginPassword = document.getElementById("loginPassword");
-
+loaderL.style.display = "block"
+login.style.display = "none"
     signInWithEmailAndPassword(auth, loginEmail.value, loginPassword.value)
   .then(async (userCredential) => {
     // Signed in 
     
     const user = userCredential.user;
     console.log("USER",user)
+    // let loaderL = document.getElementById("loaderL");
+    loaderL.style.display = "block"
+login.style.display = "none"
     Swal.fire(
       'success',
       `login successfully`,
@@ -199,6 +208,7 @@ window.localStorage.setItem("userobj", JSON.stringify(docSnap.data()))
 if (docSnap.exists()) {
   
   console.log("Document data:", docSnap.data());
+  
   const querySnapshot = await getDocs(collection(db, "users")) ;
   querySnapshot.forEach((doc) => {
     // doc.data() is never undefined for query doc snapshots
