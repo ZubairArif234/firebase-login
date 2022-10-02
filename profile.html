@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+  <title>Document</title>
+</head>
+<body>
+
+  <div class="contain">
+<center>
+    <div class="profile">
+      <!-- <h1 class="heading">Profile</h1>
+      <hr />
+      <div>
+        <div class="image">
+          <img src="assets/img3.avif" alt=""  class="imgp">
+        </div>
+        <div class="info">
+          <div class="item">
+            <ul class="itemlist">
+              <li>Name = </li>
+              <li>Email = </li>
+              <li>Phone number = </li>
+              <li>Qualification = </li>
+            </ul>
+
+          </div>
+          <div class="itemsvalue">
+            <ul class="itemlist">
+              <li>zubair</li>
+            </ul>
+
+          </div>
+
+        </div>
+      </div> -->
+      <div class="nav">
+      <button class="btn btn-primary logoutbtn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Profile</button>
+      <h2>Friends</h2>
+      <button class = "logoutbtn btn btn-primary" onclick = "window.location = 'index.html'">logout</button>
+      </div>
+      <hr />
+ <!-- <h1>No Activity Yet</h1> -->
+ <table id="findlist">
+ <!-- <ul id="findlist"></ul> -->
+ </table>
+
+
+
+
+
+      
+
+
+<div class="offcanvas offcanvas-end" tabindex="-1" data-bs-scroll="true" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasRightLabel"></h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div>
+      <h4 class="heading">Chat with <span id="chat-with"></span></h4>
+    </div>
+        <hr />
+        <div class="findfrnd">
+          
+            
+            <div class="app-main">
+              <div class="chat-box">
+                <div class="messages">
+                  <ul id="all-messages"></ul>
+                </div>
+                <div class="message">
+                  <input id="message" type="text" placeholder="type message here" />
+                  <button id="send">Send</button>
+                </div>
+              </div>
+            </div>
+          
+          
+          
+        </div>
+        
+  </div>
+</div>
+
+
+
+
+
+
+    <!-- <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Profile</button> -->
+
+<div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">
+       </h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <!-- <h1 class="heading">Profile</h1>
+      <hr /> -->
+      <center>
+        <h1 class="heading">Profile</h1>
+        <hr />
+      <div>
+        <div class="image">
+          <img src="assets/img3.avif" alt=""  class="imgp">
+        </div>
+        
+          <div class="itemsvalue">
+            <ul class="itemlist" id="itmlist">
+             
+            </ul>
+
+          </div>
+
+        </div>
+      </div>
+      </center>
+  </div>
+</div>
+    
+  </div>
+  
+
+  <script src="app1.js" type="module" ></script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
